@@ -35,7 +35,7 @@ pipeline {
         stage('SCM') {
             steps {
                 git branch: 'main',
-                url: 'ssh://git@bitbucket.org:company/repo.git'
+                url: 'https://github.com/leonkk9320/cloud-infra.git'
             }
         }
         stage('build && SonarQube analysis') {
