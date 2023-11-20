@@ -34,7 +34,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                git url: 'https://github.com/foo/bar.git'
+                git url: 'https://github.com/leonkk9320/cloud-infra.git'
             }
         }
         stage('build && SonarQube analysis') {
