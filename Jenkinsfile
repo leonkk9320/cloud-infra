@@ -1,6 +1,9 @@
 pipeline {
   agent any
-  // agent { label 'linux' }
+  tools { 
+    maven 'Maven 3.3.9' 
+    jdk 'jdk8' 
+  }
   options {
     buildDiscarder (logRotator (numToKeepStr: '5'))
   }
@@ -8,7 +11,7 @@ pipeline {
     stage ('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'sq1') {
-          sh 'mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+          sh 'mvn clean package sonar:sonar'
         }
       }
     }
