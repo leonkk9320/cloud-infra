@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'Linux (aarch64)' }
+  agent { label 'linux' }
   options {
     buildDiscarder (logRotator (numToKeepStr: '5'))
   }
