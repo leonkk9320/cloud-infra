@@ -1,9 +1,9 @@
 pipeline {
   agent any
-  tools { 
-    maven 'maven 3.3.9' 
-    // jdk 'jdk8' 
-  }
+  // tools { 
+  //   maven 'maven' 
+  //   // jdk 'jdk8' 
+  // }
   options {
     buildDiscarder (logRotator (numToKeepStr: '5'))
   }
